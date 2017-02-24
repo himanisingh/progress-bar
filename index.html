@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="progress">
+<head>
+  <title>Progress Bars Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="app.css">  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="ProgressCtrl as ProgressCtrl">
+	<div class="container">
+		<h2>Progress Bars Demo</h2>
+				
+		<div class="progress" ng-repeat="progressBar in progressBarList">
+			<div class="progress-bar" role="progressbar" aria-valuenow="{{progressBar.value}}" aria-valuemin="0" aria-valuemax="100"  ng-style="{width: (progressBar.value < 100 ? progressBar.value  : 100) + '%'}" ng-class="progressBar.value > 100 ? 'limit' : ''">{{progressBar.value | number:0}}%</div>
+		</div>	
+	  
+	  <select ng-model="selectedProgressBar" ng-options="progressBar.name for progressBar in progressBarList">
+       </select>
+		
+		<div class="btn-group" role="group" aria-label="...">
+		  <button type="button" class="btn btn-default" ng-click="ProgressCtrl.handleProgress($event, selectedProgressBar)">10</button>
+		  <button type="button" class="btn btn-default" ng-click="ProgressCtrl.handleProgress($event, selectedProgressBar)">38</button>
+		  <button type="button" class="btn btn-default" ng-click="ProgressCtrl.handleProgress($event, selectedProgressBar)">-13</button>
+		  <button type="button" class="btn btn-default" ng-click="ProgressCtrl.handleProgress($event, selectedProgressBar)">-18</butto
+		</div>
+		
+	</div>
+	
+</body>
+</html>

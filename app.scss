@@ -1,0 +1,9 @@
+body {  
+  color: #333;
+  .progress-bar{
+	text-align:center;
+  }
+  .progress-bar.limit{
+	background-color: red;
+  }
+}

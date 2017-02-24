@@ -1,0 +1,8 @@
+body {
+  color: #333; }
+  body .progress-bar {
+    text-align: center; }
+  body .progress-bar.limit {
+    background-color: red; }
+
+/*# sourceMappingURL=app.css.map */

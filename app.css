@@ -1,8 +1,25 @@
-body {
-  color: #333; }
-  body .progress-bar {
-    text-align: center; }
-  body .progress-bar.limit {
-    background-color: red; }
+body .container {
+  padding: auto;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  width: 500px; }
+  body .container .progress-container .progress, body .container .progress-container btn-group, body .container .progress-container .select {
+    margin: 1em; }
+  body .container .progress-container .progress {
+    border: 1px solid black;
+    text-align: center;
+    position: relative; }
+    body .container .progress-container .progress span {
+      position: absolute;
+      left: 50%; }
+    body .container .progress-container .progress .progress-bar, body .container .progress-container .progress .limitCrossed, body .container .progress-container .progress .limit {
+      height: 50px; }
+    body .container .progress-container .progress .limitCrossed {
+      background-color: red; }
+    body .container .progress-container .progress .limit {
+      background-color: #3BB1EF; }
+  body .container .controls .dropdown, body .container .controls .btn-group {
+    display: inline-block; }
 
 /*# sourceMappingURL=app.css.map */

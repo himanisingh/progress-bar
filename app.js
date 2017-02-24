@@ -21,6 +21,8 @@ app.controller('ProgressCtrl', function($scope){
 	this.handleProgress = function(event, selectedProgressBar){	
 		
 		selectedProgressBar.value = parseInt(selectedProgressBar.value) + parseInt(event.target.innerText);  
+		selectedProgressBar.value = selectedProgressBar.value > 0 ? selectedProgressBar.value : 0;
+		selectedProgressBar.value = selectedProgressBar.value < 230 ? selectedProgressBar.value : 230;
 		console.log(selectedProgressBar);				
     };
 

@@ -1,9 +1,41 @@
-body {  
-  color: #333;
-  .progress-bar{
+body {
+  .container{
+	padding:auto;
+	margin:auto;
 	text-align:center;
+	position: relative;
+	width:500px;
+	.progress-container{
+		
+		.progress, btn-group, .select{
+			margin:1em;
+		  }
+		  .progress{
+			border: 1px solid black; 
+			text-align:center;
+			position:relative;
+			span{
+				position:absolute;
+				left:50%;
+			}
+			.progress-bar{
+				height:50px;
+			}	
+			.limitCrossed{
+				@extend .progress-bar;
+				background-color: red;
+			}
+			.limit{
+				@extend .progress-bar;
+				background-color: #3BB1EF;
+			 }
+		  } 
+	}
+	.controls{
+		.dropdown, .btn-group{
+			display: inline-block;
+		}
+	}
   }
-  .progress-bar.limit{
-	background-color: red;
-  }
+   
 }
